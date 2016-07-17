@@ -1,0 +1,19 @@
+/** file: gettysburg.css
+ *  place in same directory as Gettysburg.java and have your build system copy it
+ *  to the same location as Gettysburg.class */
+.root {
+  -fx-background-color: white;
+}
+
+.bordered-titled-border {
+  -fx-content-display: top;
+  -fx-border-insets: 40 40 15 0;
+  -fx-background-color: white;
+  -fx-border-color: black;
+  -fx-border-width: 1;
+}
+
+.bordered-titled-content {
+  -fx-padding: 20 20 20 0;
+}
+
