@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+currentTime=$(date +'%Y-%m-%d %H:%M:%S.%3N');
+
+lightD=$(shuf -i 200-5000 -n 1);
+xAxis=$(shuf -i 200-5000 -n 1);
+yAxis=$(shuf -i 200-5000 -n 1);
+zAxis=$(shuf -i 200-5000 -n 1);
+#id=$(shuf -i 1-2 -n 1);
+
+
+
+#echo $currentTime;
+
+
+mysql -u WSN -p123 testdb << EOF
+
+
+#id, stamp,light,xaxis,yaxis,zaxis,temp,hum => int +timestamp
+
+
+insert into measureddata VALUES ('1','$currentTime',$lightD,'$xAxis','$yAxis','$zAxis','','');
+
+
+EOF
+
